@@ -1,0 +1,6 @@
+FROM ubuntu
+COPY apthelper.sh .
+RUN chmod +x apthelper.sh
+RUN apt update
+RUN echo "y" | apt install software-properties-common
+CMD ./apthelper.sh
